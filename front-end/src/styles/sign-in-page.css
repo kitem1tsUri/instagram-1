@@ -1,0 +1,51 @@
+.border { 
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue;
+    flex-direction: column;
+}
+
+.container {
+    width: 350px;
+    height: 401px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 0.5px solid gray;
+}
+.mini-container { 
+    margin-top: 20px;
+    background-color: white;
+    width: 350px;
+    height: 63px;
+    border: 0.5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inp { 
+    background-color: aliceblue;
+    border-radius: 2px;
+    border: 0.5px solid black;
+    width: 268px;
+    height: 38px;
+    margin: 5px;
+}
+.log-in { 
+    margin: 5px;
+    background-color: aqua;
+    width: 268px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.or { 
+    margin: 10px;
+}

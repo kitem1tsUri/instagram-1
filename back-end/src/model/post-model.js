@@ -6,6 +6,7 @@ const PostSchema = new Schema({
     userName: String,
     userProfile: String,
     like: Number,
+    password: String, 
     images: [String]
 })
 

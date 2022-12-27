@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const uri = "mongodb+srv://    @cluster0.pifgbll.mongodb.net/?retryWrites=true&w=majority"
+const uri = "mongodb+srv://kitetsu:010707050711@khuslens.jegg0by.mongodb.net/?retryWrites=true&w=majority"
 //          End mongodb Atlas iin userName password baina
 
 const connect = async () => {
