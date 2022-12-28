@@ -6,12 +6,13 @@ import { SignUpPage } from './pages/sign-up-page';
 import './styles/App.css';
 
 const App = () => {
-  return (
+  return ( <div>
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/sign-in" element={<SignInPage />} />
       <Route path="/sign-up" element={<SignUpPage/>}/>
     </Routes>
+  </div>
   );
 }
 
