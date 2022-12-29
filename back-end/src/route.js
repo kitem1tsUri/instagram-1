@@ -15,7 +15,7 @@ router
   .post("/posts", createPost)
   // .get('/posts/:id', getPost)
   .get("/", getUser)
-  .post("/", createUser)
+  .post("/", getUser)
   .patch("/posts/:id", updatePost)
   .delete("/posts/:id", deletePost);
 

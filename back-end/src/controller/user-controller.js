@@ -4,12 +4,13 @@ const UserModel = require("../model/user-model");
 // exports.getUsers = async (req, res) => {};
 
 exports.createUser = async (req, res) => {
-  console.log(req);
+  console.log(req.body);
   const createUser = await UserModel.create({ ...req.body });
   res.status(201).json({ message: `New user is created. `, data: createUser });
 };
 
 exports.getUser = async (req, res) => {
+  console.log(req.body);
   try {
     const users = await UserModel.findOne({
       userName: req.body.name,
