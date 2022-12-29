@@ -7,15 +7,14 @@ const {
   deletePost,
   updatePost,
 } = require("./controller/post-controller");
-const { createUser } = require("./controller/user-controller");
+const { createUser, getUser } = require("./controller/user-controller");
 
 router
-  .get("/", (req, res) => {
-    res.status("200").json({ message: "alive" });
-  })
+  // .get("/", (rs
   .get("/posts", getPosts)
   .post("/posts", createPost)
   // .get('/posts/:id', getPost)
+  .get("/", getUser)
   .post("/", createUser)
   .patch("/posts/:id", updatePost)
   .delete("/posts/:id", deletePost);

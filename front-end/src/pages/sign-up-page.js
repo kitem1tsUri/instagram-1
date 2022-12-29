@@ -25,7 +25,6 @@ export const SignUpPage = () => {
     setValue(event.target.value);
     console.log(event.target.value, " password");
   };
-
   return (
     <div className="border">
       <div className="container">

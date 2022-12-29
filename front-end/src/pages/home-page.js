@@ -7,8 +7,10 @@ export const HomePage = () => {
         <div className='large-cont'>
             <div className='left-cont'>hii broder</div>
             <div className='cont'>
-                <div className='posts'> kitemu</div>
-
+                <div className='feed'>
+                    <div className='storys'>end story baih</div>
+                    <div className='posts'>end posts baih</div>
+                </div>
             </div> 
             {/* <PostComponent /> */}
         </div>
