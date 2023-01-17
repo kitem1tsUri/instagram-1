@@ -11,10 +11,13 @@ exports.createUser = async (req, res) => {
 
 exports.getUser = async (req, res) => {
   console.log(req.body);
+  const salt = bcrypt.genSaltSync(1); 
+  const hash = bcrypt.hashSync(req.body.pass ,salt)
+
   try {
     const users = await UserModel.findOne({
       userName: req.body.name,
-      password: req.body.pass,
+      password: hash,
     });
     res.status(200).json({
       message: true,

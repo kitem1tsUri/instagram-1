@@ -5,7 +5,7 @@ import axios from "axios";
 
 export const SignInPage = () => {
   const get = async () => {
-    const user = await axios.get("http://localhost:8000/", {
+    const user = await axios.post("http://localhost:8001/", {
       name: "claymore",
       pass: "kitetsu",
     });

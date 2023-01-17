@@ -22,6 +22,8 @@ export const SignUpPage = () => {
     console.log(event.target.value, " username");
   };
   const gotValue = (event) => {
+     
+     
     setValue(event.target.value);
     console.log(event.target.value, " password");
   };
@@ -30,7 +32,7 @@ export const SignUpPage = () => {
       <div className="container">
         <p>Instagram</p>
         <input placeholder="username" onChange={getValue} className="inp" />
-        <input placeholder="Password"  onChange={gotValue} className="inp" />
+        <input placeholder="Password" onChange={gotValue} className="inp" />
         <div className="log-in" onClick={signUp}>
           Sign up
         </div>
