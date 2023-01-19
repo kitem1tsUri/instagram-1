@@ -13,7 +13,7 @@ export const SignInPage = () => {
       name: userr,
       pass: passw,
     });
-    console.log('hello')
+    // console.log('hello')
     console.log(user);
   };
   const users = (event) => {
