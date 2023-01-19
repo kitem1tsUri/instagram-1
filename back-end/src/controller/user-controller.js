@@ -1,28 +1,46 @@
 const { request, response } = require("express");
 const UserModel = require("../model/user-model");
+const bcrypt = require("bcrypt");
 
 // exports.getUsers = async (req, res) => {};
 
 exports.createUser = async (req, res) => {
   console.log(req.body);
-  const createUser = await UserModel.create({ ...req.body });
+  const salt = bcrypt.genSaltSync(1);
+  const hash = bcrypt.hashSync(req.body.password, salt);
+
+  const createUser = await UserModel.create({
+    password: hash,
+    userName: req.body.userName,
+  });
   res.status(201).json({ message: `New user is created. `, data: createUser });
 };
 
-exports.getUser = async (req, res) => {
-  console.log(req.body);
-  const salt = bcrypt.genSaltSync(1); 
-  const hash = bcrypt.hashSync(req.body.pass ,salt)
+exports.logIn = async (req, res) => {
+  const salt = bcrypt.genSaltSync(1);
+  const hash = bcrypt.hashSync(req.body.pass, salt);
 
   try {
-    const users = await UserModel.findOne({
-      userName: req.body.name,
-      password: hash,
+    console.log("huuye");
+    const { name, pass } = req.body;
+    const user = await UserModel.findOne({
+      userName: name,
     });
-    res.status(200).json({
-      message: true,
-      data: users,
-    });
+    console.log(user);
+    if (user) {
+      if (pass === user.password) {
+        res.send(user);
+      } else {
+        res.send("useriin password buruu bainaa");
+      }
+    } else {
+      res.send("user not found");
+    }
+
+    // res.status(200).json({
+    //   message: true,
+    //   data: user,
+    // });
   } catch (error) {
     return res.status(400).json({ message: error, data: null });
   }

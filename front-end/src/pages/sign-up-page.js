@@ -10,7 +10,7 @@ export const SignUpPage = () => {
   const [value, setValue] = useState();
   const navigate = useNavigate();
   const signUp = async (setEvent) => {
-    const user = await axios.post("http://localhost:8000/", {
+    const user = await axios.post("http://localhost:8001/", {
       userName: event,
       password: value,
     });
