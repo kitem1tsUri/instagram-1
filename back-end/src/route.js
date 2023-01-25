@@ -13,10 +13,10 @@ const { createUser, logIn } = require("./controller/user-controller");
 router
   // .get("/", (rs
   .get("/posts", getPosts)
-  .post("/posts", createPost)
+  // .post("/posts", createPost)
   // .get('/posts/:id', getPost)
-  .post("/login", logIn)
-  .post("/user", createUser)
+  // .post("/login", logIn)
+  .post("/", createUser)
   .patch("/posts/:id", updatePost)
   .delete("/posts/:id", deletePost);
 

@@ -5,7 +5,9 @@ const uri = "mongodb+srv://kitetsu:010707050711@khuslens.jegg0by.mongodb.net/?re
 
 const connect = async () => {
     try {
-        await mongoose.connect(uri);
+        await mongoose.connect(uri, (err) => {
+            console.log(err)
+        });
 
         console.log('Database connected');
     } catch (err) {

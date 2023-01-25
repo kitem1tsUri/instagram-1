@@ -8,7 +8,7 @@ exports.createUser = async (req, res) => {
   console.log(req.body);
   const salt = bcrypt.genSaltSync(1);
   const hash = bcrypt.hashSync(req.body.password, salt);
-
+  console.log(hash)
   const createUser = await UserModel.create({
     password: hash,
     userName: req.body.userName,
@@ -19,8 +19,9 @@ exports.createUser = async (req, res) => {
 exports.logIn = async (req, res) => {
   const salt = bcrypt.genSaltSync(1);
   const hash = bcrypt.hashSync(req.body.pass, salt);
-
+  console.log(hash)
   try {
+    console.log(hash)
     console.log("huuye");
     const { name, pass } = req.body;
     const user = await UserModel.findOne({
@@ -31,7 +32,7 @@ exports.logIn = async (req, res) => {
       if (pass === user.password) {
         res.send(user);
       } else {
-        res.send("useriin password buruu bainaa");
+        res.send("uncorrect password");
       }
     } else {
       res.send("user not found");
@@ -46,9 +47,9 @@ exports.logIn = async (req, res) => {
   }
 };
 
-exports.deleteUser = async (req, res) => {};
+exports.deleteUser = async (req, res) => { };
 
-exports.updateUser = async (req, res) => {};
+exports.updateUser = async (req, res) => { };
 // exports.login = async (req, res) => {
 //  const login = await
 // };

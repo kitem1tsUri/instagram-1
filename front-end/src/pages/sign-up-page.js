@@ -16,6 +16,7 @@ export const SignUpPage = () => {
     });
     alert("now you have an instagram account");
     navigate("/sign-in");
+    console.log("signUp works")
   };
   const getValue = (event) => {
     setEvent(event.target.value);
