@@ -1,0 +1,25 @@
+.middle-cont {
+    background-color: rgba(18,18,18,255);
+    width: 100vw;
+    height: 100vh;  
+    color: white;
+    padding-left: 300px;
+    color: rgba(0,0,0,255);
+}
+.Prof-img { 
+    background-color: white;
+    border-radius: 50%;
+    background-color: whites;
+    color: cyan;
+    width: 150px;
+    height: 150px;
+    margin-top: 18px;
+    margin-left: 140px;
+
+}
+.posts {
+    color: white;
+    height: 100vh;
+    margin-left: 70px;
+    margin-top: 90px;
+}
